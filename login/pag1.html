@@ -18,8 +18,12 @@
         let titulo = document.querySelector("h1");
 
         botao.addEventListener("click", function() {
-            if (inputUsuario.value == "admin" && inputSenha.value == "1234") {
-                titulo.innerText = "Login realizado com sucesso";
+            if (inputUsuario.value == "admin") {
+                if (inputSenha.value == "1234") {
+                    titulo.innerText = "Login realizado com sucesso";
+                } else {
+                    titulo.innerText = "Usuário ou senha inválidos";
+                }
             } else {
                 titulo.innerText = "Usuário ou senha inválidos";
             }

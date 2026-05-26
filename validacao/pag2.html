@@ -8,7 +8,7 @@
 
     <input type="text" class="nome" placeholder="Nome">
     <input type="text" class="email" placeholder="Email">
-    <input type="text" class="senha" placeholder="Senha">
+    <input type="password" class="senha" placeholder="Senha">
     <button>Cadastrar</button>
     <h1></h1>
 
@@ -20,7 +20,11 @@
         let titulo = document.querySelector("h1");
 
         botao.addEventListener("click", function() {
-            if (inputNome.value == "" || inputEmail.value == "" || inputSenha.value == "") {
+            if (inputNome.value == "") {
+                titulo.innerText = "Preencha todos os campos";
+            } else if (inputEmail.value == "") {
+                titulo.innerText = "Preencha todos os campos";
+            } else if (inputSenha.value == "") {
                 titulo.innerText = "Preencha todos os campos";
             } else if (inputSenha.value.length < 6) {
                 titulo.innerText = "Senha muito curta";
