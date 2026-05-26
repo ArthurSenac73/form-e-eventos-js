@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Idade</title>
+</head>
+<body>
+
+    <input type="text" placeholder="Digite sua idade">
+    <button>Verificar</button>
+    <h1></h1>
+
+    <script>
+        let input = document.querySelector("input");
+        let botao = document.querySelector("button");
+        let titulo = document.querySelector("h1");
+
+        botao.addEventListener("click", function() {
+            if (input.value < 18) {
+                titulo.innerText = "Você é menor de idade";
+            } else {
+                titulo.innerText = "Você é maior de idade";
+            }
+        });
+    </script>
+
+</body>
+</html>

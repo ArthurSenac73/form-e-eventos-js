@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro com Validação</title>
+</head>
+<body>
+
+    <input type="text" class="nome" placeholder="Nome">
+    <input type="text" class="email" placeholder="Email">
+    <input type="text" class="senha" placeholder="Senha">
+    <button>Cadastrar</button>
+    <h1></h1>
+
+    <script>
+        let inputNome = document.querySelector(".nome");
+        let inputEmail = document.querySelector(".email");
+        let inputSenha = document.querySelector(".senha");
+        let botao = document.querySelector("button");
+        let titulo = document.querySelector("h1");
+
+        botao.addEventListener("click", function() {
+            if (inputNome.value == "" || inputEmail.value == "" || inputSenha.value == "") {
+                titulo.innerText = "Preencha todos os campos";
+            } else if (inputSenha.value.length < 6) {
+                titulo.innerText = "Senha muito curta";
+            } else {
+                titulo.innerText = "Cadastro realizado com sucesso";
+            }
+        });
+    </script>
+
+</body>
+</html>

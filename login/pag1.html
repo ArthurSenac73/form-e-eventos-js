@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Tela de Login</title>
+</head>
+<body>
+
+    <input type="text" class="usuario" placeholder="Usuário">
+    <input type="text" class="senha" placeholder="Senha">
+    <button>Entrar</button>
+    <h1></h1>
+
+    <script>
+        let inputUsuario = document.querySelector(".usuario");
+        let inputSenha = document.querySelector(".senha");
+        let botao = document.querySelector("button");
+        let titulo = document.querySelector("h1");
+
+        botao.addEventListener("click", function() {
+            if (inputUsuario.value == "admin" && inputSenha.value == "1234") {
+                titulo.innerText = "Login realizado com sucesso";
+            } else {
+                titulo.innerText = "Usuário ou senha inválidos";
+            }
+        });
+    </script>
+
+</body>
+</html>
